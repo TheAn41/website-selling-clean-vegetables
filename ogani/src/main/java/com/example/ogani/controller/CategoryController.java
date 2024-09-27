@@ -41,14 +41,14 @@ public class CategoryController {
         return ResponseEntity.ok(category);
     }
 
-    @PutMapping("/enabled/{id}")
-    public ResponseEntity<?> enabled(@PathVariable Long id) {
+    @PutMapping("/enable/{id}")
+    public ResponseEntity<?> enableCategory(@PathVariable Long id) {
         categoryService.enableCategory(id);
         return ResponseEntity.ok(new MessageResponse("Cập nhật thành công"));
     }
 
     @DeleteMapping("/delete/{id}")
-    public ResponseEntity<?> delete(@PathVariable Long id) {
+    public ResponseEntity<?> deleteCategory(@PathVariable Long id) {
         categoryService.deleteCategory(id);
         return ResponseEntity.ok(new MessageResponse("Xoá thành công"));
     }
